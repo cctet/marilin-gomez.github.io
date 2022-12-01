@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    height: 100%;
+    background-image: url('./1.jpeg');
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+.logo{
+    height: 120px;
+    margin-top: 30px;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-image: url('fondo.jpg');
+}  
+h1{
+    color: palevioletred;
+    text-shadow: 3px 3px black ;
+    margin-top: 50px;
+}
+h2{
+    color: palevioletred;
+    text-shadow: 3px 3px black ;
+    margin-top: 50px;
+}
+.navbar {
+    grid-area: navbar;
+    background-color: rgba(135, 206, 250, 0.342);
+    color: blue;
+    text-shadow: 2px 2px  burlywood;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.uno{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top:  10px;
+    background-color: rgba(135, 206, 250, 0.363);
+}
+.dos{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top:  10px;    
+    background-color: rgba(135, 206, 250, 0.363);
+}
+.tres{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top:  10px;
+    background-color: rgba(135, 206, 250, 0.363);
+}
+.cuatro{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top:  10px;
+    background-color: rgba(135, 206, 250, 0.363);
+}
+.imgnav{
+    width: 80px;
+    border-radius: 20px;
+}
+.navbar{
+    grid-area: navbar;
+    display: grid;
+}
+.sidebar {
+    background-image: url(fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: sidebar;
+    background-color: rgb(53, 109, 145);
+}
+.redesidebar:hover{
+    box-shadow: 1px 1px 1px 1px violet;
+    top: 0%;
+    transform: scale(0.8);
+    transition: transform 0.1s;
+}
+.redesidebar1:hover{
+    box-shadow: 1px 1px 1px 1px violet;
+    top: 0%;
+    transform: scale(0.8);
+    transition: transform 0.1s;
+}
+.redesidebar2:hover{
+    box-shadow: 1px 1px 1px 1px violet;
+    top: 0%;
+    transform: scale(0.8);
+    transition: transform 0.1s;
+}
+.redesidebar3:hover{
+    box-shadow: 1px 1px 1px 1px violet;
+    top: 0%;
+    transform: scale(0.8);
+    transition: transform 0.1s;
+}
+.redesidebar4:hover{
+    box-shadow: 1px 1px 1px 1px violet;
+    top: 0%;
+    transform: scale(0.8);
+    transition: transform 0.1s;
+}
+.imgsidebar{
+    height: 100px;
+}
+.main {
+    background-image: url(fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: main;
+    background-color: rgba(238, 130, 238, 0.123);
+}
+.imgm{
+    height: 130px;
+}
+.um{
+    height:180px ;
+}
+.tr1{
+    background-color: lightskyblue;
+}
+.tr2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aqua;
+    background-color: lightskyblue;
+}
+.main2{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('contactanos.png');
+}
+.tr3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: lightcoral;
+    background-color: lightskyblue;
+}
+.tr4{
+    font-family: 'Times New Roman', Times, serif;
+    color: lightsalmon;
+    background-color: lightskyblue;
+}
+.footer {
+    grid-area: footer;
+    background-color: violet;
+}
+@media(min-width:600px){
+    .grid-container{
+     grid:gap 20px;
+    grid-template:
+    "header header"200px
+    "navbar navbar"auto
+    "sidebar main"auto
+    "footer footer"80px/
+    200px auto;
+    overflow-y:scroll;
+
+    }  
+      
+}
+@media(min-width:900px){
+    .grid-container{
+     grid-template:
+     "header header header"200px
+     "navbar main sidebar"auto
+     "footer footer footer"200px/
+     200px auto 250px;
+     overflow-y:scroll;
+    }
+    .navbar{
+        grid-area: navbar;
+        grid-template: 
+        "uno" 100px
+        "dos" 100px
+        "tres" 100px
+        "cuatro" 100px
+        ;
+        grid-row-gap: 20px;
+    }
+
+}
+
